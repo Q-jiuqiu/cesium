@@ -2,13 +2,13 @@
  * @Author: quling
  * @Date: 2021-09-22 15:56:02
  * @LastEditors: quling
- * @LastEditTime: 2022-08-05 14:57:49
+ * @LastEditTime: 2022-08-05 17:25:43
  * @Description: 
 -->
 <template>
   <div
-    class="CesiumContainer"
-    id="CesiumContainer"
+    class="cesiumContainer"
+    id="cesiumContainer"
   >
   </div>
 </template>
@@ -28,11 +28,17 @@ export default {
   methods: {
     init() {
       Cesium.Ion.defaultAccessToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MjIyN2I3Zi1lYjQyLTRmNTctYTBjZC05NjY4OGJhMmYyZjYiLCJpZCI6MTAzNjMxLCJpYXQiOjE2NTk2MDExMDB9.uKE-PFD2wfwrMYa_gYO-qM35Og8-Qs5cTouDmpRq_qo";
-
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzOWQyYjRmZC0zMmJlLTRjMzUtYjRhMC1hODA1YzFkZmVlNDQiLCJpZCI6MTAzNjMxLCJpYXQiOjE2NTk2ODg1ODN9.7KqLKcOLZltNGWrZmtCcQPmDcpo4KkeV445XMErRrfE";
+      // const url =
+      //   "https://webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}";
       // 使用“cesiumContainer”ID 在 HTML 元素中初始化 Cesium 查看器。
       this.viewer = new Cesium.Viewer("cesiumContainer", {
         terrainProvider: Cesium.createWorldTerrain(),
+        // sceneMode: 3,
+        // // 配置地图源:高德影像
+        // imageryProvider: new Cesium.UrlTemplateImageryProvider({
+        //   url,
+        // }),
       });
       this.viewer.scene.primitives.add(Cesium.createOsmBuildings());
       this.viewer.camera.flyTo({
@@ -48,7 +54,7 @@ export default {
 </script>
 
 <style scoped>
-.CesiumContainer {
+.cesiumContainer {
   width: 100%;
   height: 100%;
 }
