@@ -1,0 +1,76 @@
+{
+  "name": "mytest",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dt": "vue-cli-service serve --mode t",
+    "dp": "vue-cli-service serve --mode p",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "cz": "npm run log && git add . && git cz",
+    "log": "conventional-changelog --config ./node_modules/vue-cli-plugin-commitlint/lib/log -i CHANGELOG.md -s -r 0"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "await-to-js": "^3.0.0",
+    "axios": "^0.24.0",
+    "cesium": "^1.96.0",
+    "core-js": "^3.18.0",
+    "gridmanager-vue": "^1.11.0",
+    "right-pad": "^1.0.1",
+    "view-design": "^4.7.0-beta.11",
+    "vue": "^3.0.0",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.0.3",
+    "commitlint": "^8.2.0",
+    "conventional-changelog-cli": "^2.0.28",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "husky": "^7.0.2",
+    "typescript": "~3.9.3",
+    "vue-cli-plugin-commitlint": "~1.0.12",
+    "vue-jest": "^5.0.0-0",
+    "webpack-cli": "^4.9.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/vue-cli-plugin-commitlint/lib/cz"
+    }
+  }
+}
