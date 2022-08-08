@@ -2,14 +2,13 @@
  * @Author: quling
  * @Date: 2022-08-05 14:33:10
  * @LastEditors: quling
- * @LastEditTime: 2022-08-05 17:07:55
+ * @LastEditTime: 2022-08-08 17:20:39
  * @Description: 
  */
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
 import registerComponents from "@/components";
-import 'view-design/dist/styles/iview.css';
 
 const app = createApp(App)
 
