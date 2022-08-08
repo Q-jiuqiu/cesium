@@ -2,7 +2,7 @@
  * @Author: quling
  * @Date: 2021-09-22 15:56:02
  * @LastEditors: quling
- * @LastEditTime: 2022-08-08 16:31:13
+ * @LastEditTime: 2022-08-08 17:18:48
  * @Description: 
 -->
 <template>
@@ -48,7 +48,7 @@ export default {
         baseLayerPicker: false, // 不创建右上角的底图选中组件
         animation: false, // 不创建左下角的动画小组件
         terrainProvider: Cesium.createWorldTerrain(),
-        // sceneMode: 3,
+        sceneMode: 0, // 初始场景模式 参数取值(0\1\2\3) 3-3D 2-2D
         // // 配置地图源:高德影像
         // imageryProvider: new Cesium.UrlTemplateImageryProvider({
         //   url,
