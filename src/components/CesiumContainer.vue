@@ -2,7 +2,7 @@
  * @Author: quling
  * @Date: 2021-09-22 15:56:02
  * @LastEditors: quling
- * @LastEditTime: 2022-08-08 15:30:46
+ * @LastEditTime: 2022-08-08 16:31:13
  * @Description: 
 -->
 <template>
@@ -33,6 +33,20 @@ export default {
       //   "https://webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}";
       // 使用“cesiumContainer”ID 在 HTML 元素中初始化 Cesium 查看器。
       this.viewer = new Cesium.Viewer("cesiumContainer", {
+        shouldAnimate: true, // ???
+        scene3DOnly: true, // 如果为true，则每个几何体实例将仅以3D渲染以节省GPU内存,sceneModePicker将不生效
+        navigationInstructionsInitiallyVisible: false, // 如果导航说明最初应该是可见的，则为true；如果直到用户明确单击该按钮，则不显示该说明，否则为false
+        navigationHelpButton: false, // 不创建右上角导航帮助(问号)按钮
+        timeline: false, // 不创建地图时间轴组件
+        selectionIndicator: false, // ???
+        sceneModePicker: false, // 不创建地图的形状(地图形)组件----(球形\正方形\梯形)
+        infoBox: false, // ????
+        homeButton: false, // 不创建右上角地图主页(小房子形)组件
+        geocoder: false, // 不创建右上角的搜索(放大镜形)组件
+        vrButton: true, // 在右下角创建一个vrButton按钮
+        fullscreenButton: false, // 不创建右下角的全屏按钮
+        baseLayerPicker: false, // 不创建右上角的底图选中组件
+        animation: false, // 不创建左下角的动画小组件
         terrainProvider: Cesium.createWorldTerrain(),
         // sceneMode: 3,
         // // 配置地图源:高德影像
