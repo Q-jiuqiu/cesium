@@ -2,7 +2,7 @@
  * @Author: quling
  * @Date: 2021-09-22 15:56:02
  * @LastEditors: quling
- * @LastEditTime: 2022-08-05 17:25:43
+ * @LastEditTime: 2022-08-08 15:30:46
  * @Description: 
 -->
 <template>
@@ -42,7 +42,12 @@ export default {
       });
       this.viewer.scene.primitives.add(Cesium.createOsmBuildings());
       this.viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(-122.4175, 37.655, 400),
+        // 使用成都的经纬度
+        destination: Cesium.Cartesian3.fromDegrees(
+          103.37515728753266,
+          30.59996766676398,
+          10000
+        ),
         orientation: {
           heading: Cesium.Math.toRadians(0.0),
           pitch: Cesium.Math.toRadians(-15.0),
