@@ -2,22 +2,30 @@
  * @Author: quling
  * @Date: 2021-09-22 15:56:02
  * @LastEditors: quling
- * @LastEditTime: 2022-08-08 17:18:48
+ * @LastEditTime: 2022-08-10 14:26:43
  * @Description: 
 -->
 <template>
-  <div
-    class="cesiumContainer"
-    id="cesiumContainer"
-  >
+  <div class="layout">
+    <div class="menu">
+      <button @click="addPoint">绘制点</button>
+    </div>
+    <div
+      class="cesiumContainer"
+      id="cesiumContainer"
+    >
+    </div>
   </div>
 </template>
 
 <script>
 import * as Cesium from "cesium";
 import "cesium/Build/Cesium/Widgets/widgets.css";
+import toolsUtils from "./utils/toolsUtils";
+
 export default {
   name: "CesiumContainer",
+  mixins: [toolsUtils],
   data() {
     return { viewer: null };
   },
@@ -73,8 +81,21 @@ export default {
 </script>
 
 <style scoped>
-.cesiumContainer {
-  width: 100%;
+.layout {
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  height: 2rem;
+  display: flex;
+  align-content: center;
+}
+
+.cesiumContainer {
+  flex: 1;
+  width: 100%;
 }
 </style>

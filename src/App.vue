@@ -2,7 +2,7 @@
  * @Author: quling
  * @Date: 2021-09-13 09:39:32
  * @LastEditors: quling
- * @LastEditTime: 2022-08-05 14:57:39
+ * @LastEditTime: 2022-08-10 14:23:56
  * @Description: 
 -->
 <template>
@@ -12,8 +12,14 @@
 </template>
 
 <script>
-import CesiumContainer from "./components/CesiumContainer.vue";
+import CesiumContainer from "./components/Cesium/CesiumContainer.vue";
 export default {
   components: { CesiumContainer },
 };
 </script>
+
+<style>
+* {
+  padding: 0;
+}
+</style>
