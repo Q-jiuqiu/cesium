@@ -2,13 +2,15 @@
  * @Author: quling
  * @Date: 2021-09-22 15:56:02
  * @LastEditors: quling
- * @LastEditTime: 2022-08-10 14:26:43
+ * @LastEditTime: 2022-08-19 17:04:22
  * @Description: 
 -->
 <template>
   <div class="layout">
     <div class="menu">
-      <button @click="addPoint">绘制点</button>
+      <button @click="addPoint">绘制预设的点</button>
+      <button @click="addPolyline">绘制预设的线</button>
+      <button @click="addPolygon">绘制预设的面</button>
     </div>
     <div
       class="cesiumContainer"
