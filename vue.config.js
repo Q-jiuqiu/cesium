@@ -1,3 +1,10 @@
+/*
+ * @Author: quling
+ * @Date: 2022-08-05 14:29:52
+ * @LastEditors: quling
+ * @LastEditTime: 2022-09-05 16:53:42
+ * @Description: 
+ */
 const webpack = require('webpack');
 
 module.exports = {
@@ -11,11 +18,19 @@ module.exports = {
       "all"
     ]
   },
+
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
       CESIUM_BASE_URL: JSON.stringify('./')
       })
       ],
+  },
+
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'sass',
+      patterns: []
+    }
   }
 };
