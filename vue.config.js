@@ -11,11 +11,19 @@ module.exports = {
       "all"
     ]
   },
+
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
       CESIUM_BASE_URL: JSON.stringify('./')
       })
       ],
+  },
+
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'sass',
+      patterns: []
+    }
   }
 };
